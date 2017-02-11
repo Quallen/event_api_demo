@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: rails
+  password: rails
+  pool: 5
+
+development:
+  <<: *default
+  database: seeclickfix_demo_development
+
+
+test:
+  <<: *default
+  database: seeclickfix_demo_test
