@@ -3,11 +3,13 @@ class ApiEventClientController < ApplicationController
 
     if params[:repo].present?
       response = Typhoeus.get("https://api.github.com/repos/#{params[:owner]}/#{params[:repo]}/events")
-      response.code == 200 ? flash.now[:notice] = "Events retrieved" : flash.now[:error] = "Owner / Repo combo not found"
 
       if response.code == 200
-        #puts JSON.parse(response.body)
+        flash.now[:notice] = "Events retrieved"
         @events = JSON.parse(response.body).select{|event| event["type"].downcase == params[:event].downcase }
+        flash.now[:error] = "No matching events of that type" if @events.empty?
+      else
+        flash.now[:error] = "Owner / Repo combo not found"
       end
 
     end
