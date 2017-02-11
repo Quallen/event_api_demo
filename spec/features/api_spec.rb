@@ -14,7 +14,7 @@ feature "API event client" do
     visit_fill_in_and_search(repo: "runlog", owner: "Quallen", event: "nonsense")
 
     page.should have_content "Events retrieved"
-    page.should have_content "No matching events of that type"
+    page.should have_content "no matching events of that type"
   end
 
   scenario "failure path with invalid repo or owner" do
