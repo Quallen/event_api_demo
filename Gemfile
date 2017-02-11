@@ -22,6 +22,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'typhoeus'
 
+gem 'rake', '< 11.0'
 gem 'quiet_assets', group: :development
 
 group :development, :test do

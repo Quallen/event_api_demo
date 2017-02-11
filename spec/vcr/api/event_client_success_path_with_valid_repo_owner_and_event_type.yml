@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/Quallen/runlog/events
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Sat, 11 Feb 2017 18:51:41 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1049'
+      Status:
+      - 200 OK
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Remaining:
+      - '58'
+      X-RateLimit-Reset:
+      - '1486842640'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      - Accept-Encoding
+      ETag:
+      - '"338aa206b32eaf6bccefa5bb19ab7a7b"'
+      Last-Modified:
+      - Sun, 11 Dec 2016 23:38:35 GMT
+      X-Poll-Interval:
+      - '60'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - edf23fdc48375d9066b698b8d98062e9
+      X-GitHub-Request-Id:
+      - CFC2:29C2:28B3CC3:33B8C38:589F5D3D
+    body:
+      encoding: UTF-8
+      string: '[{"id":"5003591449","type":"CreateEvent","actor":{"id":6181439,"login":"Quallen","display_login":"Quallen","gravatar_id":"","url":"https://api.github.com/users/Quallen","avatar_url":"https://avatars.githubusercontent.com/u/6181439?"},"repo":{"id":76206463,"name":"Quallen/runlog","url":"https://api.github.com/repos/Quallen/runlog"},"payload":{"ref":"master","ref_type":"branch","master_branch":"master","description":"work
+        in progress sample project","pusher_type":"user"},"public":true,"created_at":"2016-12-11T23:38:35Z"},{"id":"5003570133","type":"CreateEvent","actor":{"id":6181439,"login":"Quallen","display_login":"Quallen","gravatar_id":"","url":"https://api.github.com/users/Quallen","avatar_url":"https://avatars.githubusercontent.com/u/6181439?"},"repo":{"id":76206463,"name":"Quallen/runlog","url":"https://api.github.com/repos/Quallen/runlog"},"payload":{"ref":null,"ref_type":"repository","master_branch":"master","description":"work
+        in progress sample project","pusher_type":"user"},"public":true,"created_at":"2016-12-11T23:25:46Z"}]'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.github.com/repos/Quallen/runlog/events
+  recorded_at: Sat, 11 Feb 2017 18:51:41 GMT
+recorded_with: VCR 3.0.3

@@ -1,0 +1,14 @@
+<p>Find me in app/views/api_event_client/_form.html.erb</p>
+
+<%= form_tag '/api_event_client/search' %>
+
+<%= label_tag "repo", "Repo name:" %>
+<%= text_field_tag "repo" %>
+
+<%= label_tag "owner", "Owner name:" %>
+<%= text_field_tag "owner" %>
+
+<%= label_tag "event", "Event type:" %>
+<%= text_field_tag "event" %>
+
+<%= submit_tag "Search" %>

@@ -1,0 +1,19 @@
+<h1>ApiEventClient#search</h1>
+<p>Find me in app/views/api_event_client/search.html.erb</p>
+
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, class: name %>
+<% end %>
+
+<%= render :partial => 'form' %>
+
+<% if @events.present? %>
+
+  <h2>Matching Events:</h2>
+
+  <% @events.each do |event| %>
+    <!-- Well inspecting does technically show the event type, actor information, and timestamps... add table or foundation columns later -->
+    <p> <%= event.inspect %> </p>
+  <% end %>
+
+<% end %>
